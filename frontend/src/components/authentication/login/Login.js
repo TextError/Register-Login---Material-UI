@@ -1,13 +1,41 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+
+// Components
+import Form from './Form';
+
+// MUI
+import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
+
+// Images
+import logo from '../../../assets/logo.png';
 
 class Login extends Component {
   render() {
     return (
-      <div>
-        Login
-      </div>
+    <Grid 
+      container
+      spacing={0}
+      direction="column"
+      alignItems="center"
+      justify="center"
+      style={{ minHeight: '100vh' }}
+    >
+      <Grid item xs={3}>
+        <img src={logo} alt='logo' className='m-auto p-10'/>
+        <Typography variant='h5' className='login-page-title'>
+          Sign up
+        </Typography>
+        <Form />
+      </Grid>   
+    </Grid> 
     )
   }
+}
+
+Login.propTypes = {
+
 }
 
 export default Login
