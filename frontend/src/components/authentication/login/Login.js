@@ -11,6 +11,9 @@ import Typography from '@material-ui/core/Typography';
 // Images
 import logo from '../../../assets/logo.png';
 
+// Css
+import '../../../css/login.css'
+
 class Login extends Component {
   render() {
     return (
@@ -23,8 +26,8 @@ class Login extends Component {
       style={{ minHeight: '100vh' }}
     >
       <Grid item xs={3}>
-        <img src={logo} alt='logo' className='m-auto p-10'/>
-        <Typography variant='h5' className='login-page-title'>
+        <img src={logo} alt='logo' className='m-auto p-tb-10'/>
+        <Typography variant='h4' className='login-page-title'>
           Sign up
         </Typography>
         <Form />

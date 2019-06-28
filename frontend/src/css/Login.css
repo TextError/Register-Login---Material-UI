@@ -1,0 +1,21 @@
+@import './app.css';
+
+
+.MuiFormLabel-root {
+  color: #000 !important;
+}
+.MuiFormLabel-root.Mui-focused {
+  color: var(--dark)!important;
+}
+
+
+.login-page-title {
+  margin: 20px 0;
+  text-align: center;
+}
+.form-text-field {
+  margin: 20px 0 !important;
+}
+.form-btn {
+  margin-top: 20px !important;
+}

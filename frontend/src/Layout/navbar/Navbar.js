@@ -6,6 +6,9 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Button from '@material-ui/core/Button';
 
+// Css
+import '../../css/navbar.css';
+
 class Navbar extends Component {
   render() {
     return (
