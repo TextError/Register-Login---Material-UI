@@ -10,6 +10,10 @@ import Home from './components/home/Home';
 import Register from './components/authentication/register/Register';
 import Login from './components/authentication/login/Login';
 
+// Redux
+import store from './store';
+import { Provider } from 'react-redux';
+
 // Layout
 import Navbar from './Layout/navbar/Navbar';
 
@@ -18,20 +22,22 @@ import './css/app.css';
 
 function App() {
   return (
-    <MuiThemeProvider theme={theme}>
-      <div className='App'>
-        <Router>
-          <Navbar />
-          <div className=''>
-            <Switch>
-              <Route exact path='/' component={Home} />
-              <Route exact path='/register' component={Register} />
-              <Route exact path='/login' component={Login} />
-            </Switch>
-          </div>
-        </Router>
-      </div>
-    </MuiThemeProvider>
+    <Provider store={store}>
+      <MuiThemeProvider theme={theme}>
+        <div className='App'>
+          <Router>
+            <Navbar />
+            <div className=''>
+              <Switch>
+                <Route exact path='/' component={Home} />
+                <Route exact path='/register' component={Register} />
+                <Route exact path='/login' component={Login} />
+              </Switch>
+            </div>
+          </Router>
+        </div>
+      </MuiThemeProvider>
+    </Provider>
   );
 };
 
