@@ -6,6 +6,9 @@ import Grid from '@material-ui/core/Grid';
 // Components
 import InputField from './InputField';
 
+// CSS
+import '../../../css/register.css';
+
 class Register extends Component {
   constructor() {
     super();
@@ -24,26 +27,35 @@ class Register extends Component {
 
   render() {
     const { first_name, last_name, email, password, password2 } = this.state;
-    console.log(email)
     return (
       <div className='register'>
         <form className='' noValidate>
-          <Grid
+          <Grid 
             container
             spacing={0}
-            direction="column"
             alignItems="center"
             justify="center"
             style={{ minHeight: '100vh' }}
           >
-            <Grid item xs={12} sm={6}>
+            <Grid item xs={8} sm={4} md={2}>
               <InputField
                 variant='outlined'
-                id="email"
-                label="Email Address"
-                name="email"
-                value={email}
-                autoComplete="email"
+                id="first_name"
+                label="First Name"
+                name="first_name"
+                value={first_name}
+                autoComplete="first_name"
+                onChange={this.onChange}
+              />
+            </Grid>
+            <Grid item xs={8} sm={4} md={2}>
+              <InputField
+                variant='outlined'
+                id="last_name"
+                label="Last Name"
+                name="last_name"
+                value={last_name}
+                autoComplete="last_name"
                 onChange={this.onChange}
               />
             </Grid>

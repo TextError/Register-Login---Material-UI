@@ -17,22 +17,22 @@ import '../../../css/login.css'
 class Login extends Component {
   render() {
     return (
-    <Grid 
-      container
-      spacing={0}
-      direction="column"
-      alignItems="center"
-      justify="center"
-      style={{ minHeight: '100vh' }}
-    >
-      <Grid item xs={3}>
-        <img src={logo} alt='logo' className='m-auto p-tb-10'/>
-        <Typography variant='h4' className='login-page-title'>
-          Sign up
-        </Typography>
-        <Form />
-      </Grid>   
-    </Grid> 
+      <Grid 
+        container
+        spacing={0}
+        direction="column"
+        alignItems="center"
+        justify="center"
+        style={{ minHeight: '100vh' }}
+      >
+        <Grid item xs={6}>
+          <img src={logo} alt='logo' className='m-auto p-tb-10'/>
+          <Typography variant='h4' className='login-page-title'>
+            Sign up
+          </Typography>
+          <Form />
+        </Grid>   
+      </Grid> 
     )
   }
 }
