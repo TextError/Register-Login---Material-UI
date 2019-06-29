@@ -26,7 +26,7 @@ function App() {
       <MuiThemeProvider theme={theme}>
         <div className='App'>
           <Router>
-            <Navbar />
+            {/* <Navbar /> */}
             <div className=''>
               <Switch>
                 <Route exact path='/' component={Home} />
