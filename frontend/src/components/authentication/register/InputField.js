@@ -10,7 +10,9 @@ const InputField = ({
   id,
   label,
   name,
-  autoComplete
+  value,
+  autoComplete,
+  onChange
 }) => {
   return (
     <div className='register-text-field'>
@@ -21,7 +23,9 @@ const InputField = ({
         id={id}
         label={label}
         name={name}
+        value={value}
         autoComplete={autoComplete}
+        onChange={onChange}
       />
     </div>
   );
@@ -32,6 +36,7 @@ InputField.propTypes = {
   id: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
   autoComplete: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
 };
