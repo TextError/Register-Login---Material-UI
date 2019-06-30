@@ -43,4 +43,9 @@ InputField.propTypes = {
   autoComplete: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
 };
+
+InputField.defaultProps = {
+  type: 'text'
+};
+
 export default InputField;

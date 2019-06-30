@@ -20,9 +20,28 @@ import logo from '../../../assets/logo.png';
 import '../../../css/login.css'
 
 class Login extends Component {
+  constructor() {
+    super();
+    this.state = {
+      email: '',
+      password: ''
+    }
+  }
+
+  onChange = e => {
+    this.setState({ [e.target.name]: e.target.value });
+  };
+
+  onSubmit = e => {
+    e.preventDefault();
+
+    console.log('test')
+  };
+
   render() {
+    const { email, password } = this.state;
     return (
-      <div classNam='login'>
+      <div className='login'>
         <Grid 
           container
           direction="column"
@@ -34,18 +53,19 @@ class Login extends Component {
           <Typography component="h1" variant="h4" className='login-sign-up'>
             Sign in
           </Typography>
-          <form className='login-form' noValidate>
+          <form className='login-form' noValidate onSubmit={this.onSubmit}>
             <Grid container>
               <Grid item xs={12}>
                 <Box mb={2}>
                   <InputField
                     variant="outlined"
-                    margin="normal"
                     required
                     fullWidth
                     id="email"
                     label="Email Address"
                     name="email"
+                    value={email}
+                    onChange={this.onChange}
                     autoComplete="email"
                     autoFocus
                   />
@@ -55,13 +75,14 @@ class Login extends Component {
                 <Box mb={2}>
                   <InputField
                     variant="outlined"
-                    margin="normal"
                     required
                     fullWidth
                     name="password"
                     label="Password"
                     type="password"
                     id="password"
+                    value={password}
+                    onChange={this.onChange}
                     autoComplete="current-password"
                   />
                 </Box>
@@ -98,9 +119,9 @@ class Login extends Component {
           </form>
         </Grid> 
       </div>
-    )
-  }
-}
+    );
+  };
+};
 
 Login.propTypes = {
 
