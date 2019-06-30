@@ -17,9 +17,9 @@ import InputField from '../InputField';
 import logo from '../../../assets/logo.png';
 
 // Css
-import '../../../css/signUp.css'
+import '../../../css/signIn.css'
 
-class SignUp extends Component {
+class SignIn extends Component {
   constructor() {
     super();
     this.state = {
@@ -123,8 +123,8 @@ class SignUp extends Component {
   };
 };
 
-SignUp.propTypes = {
+SignIn.propTypes = {
 
 }
 
-export default SignUp;
+export default SignIn;
