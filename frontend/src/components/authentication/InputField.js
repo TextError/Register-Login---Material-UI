@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 // MUI
@@ -11,11 +11,12 @@ const InputField = ({
   label,
   name,
   value,
+  type,
   autoComplete,
   onChange
 }) => {
   return (
-    <div className='register-text-field'>
+    <div className='input-field'>
       <TextField
         variant={variant}
         required
@@ -23,6 +24,7 @@ const InputField = ({
         id={id}
         label={label}
         name={name}
+        type={type}
         value={value}
         autoComplete={autoComplete}
         onChange={onChange}
@@ -36,6 +38,7 @@ InputField.propTypes = {
   id: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
+  type: PropTypes.string,
   value: PropTypes.string.isRequired,
   autoComplete: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,

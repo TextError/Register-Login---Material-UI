@@ -1,14 +1,19 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-
-// Components
-import Form from './Form';
+import { Link } from 'react-router-dom';
 
 // MUI
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Checkbox from '@material-ui/core/Checkbox';
+import Button from '@material-ui/core/Button';
+import Box from '@material-ui/core/Box';
 
-// Images
+// Components
+import InputField from '../InputField';
+
+// Logo
 import logo from '../../../assets/logo.png';
 
 // Css
@@ -17,22 +22,82 @@ import '../../../css/login.css'
 class Login extends Component {
   render() {
     return (
-      <Grid 
-        container
-        spacing={0}
-        direction="column"
-        alignItems="center"
-        justify="center"
-        style={{ minHeight: '100vh' }}
-      >
-        <Grid item xs={6}>
-          <img src={logo} alt='logo' className='m-auto p-tb-10'/>
-          <Typography variant='h4' className='login-page-title'>
-            Sign up
+      <div classNam='login'>
+        <Grid 
+          container
+          direction="column"
+          alignItems="center"
+          justify="center"
+          style={{ minHeight: '100vh' }}
+        >
+          <img src={logo} alt='logo' />
+          <Typography component="h1" variant="h4" className='login-sign-up'>
+            Sign in
           </Typography>
-          <Form />
-        </Grid>   
-      </Grid> 
+          <form className='login-form' noValidate>
+            <Grid container>
+              <Grid item xs={12}>
+                <Box mb={2}>
+                  <InputField
+                    variant="outlined"
+                    margin="normal"
+                    required
+                    fullWidth
+                    id="email"
+                    label="Email Address"
+                    name="email"
+                    autoComplete="email"
+                    autoFocus
+                  />
+                </Box>
+              </Grid>
+              <Grid item xs={12}>
+                <Box mb={2}>
+                  <InputField
+                    variant="outlined"
+                    margin="normal"
+                    required
+                    fullWidth
+                    name="password"
+                    label="Password"
+                    type="password"
+                    id="password"
+                    autoComplete="current-password"
+                  />
+                </Box>
+              </Grid>
+              <FormControlLabel
+                control={<Checkbox value="remember" color="primary" />}
+                label="Remember me"
+              />
+              <Button
+                type="submit"
+                fullWidth
+                variant="contained"
+                className='login-btn'
+              >
+                Sign In
+              </Button>
+                <Grid container>
+                  <Grid item xs>
+                    <Box mt={2}>
+                      <Link to='/recover-password'>
+                        Forgot password?
+                      </Link>
+                    </Box>
+                  </Grid>
+                <Grid item>
+                  <Box mt={2}>
+                    <Link to='/register'>
+                      {"Don't have an account? Sign Up"}
+                    </Link>
+                  </Box>
+                </Grid>
+              </Grid>
+            </Grid>
+          </form>
+        </Grid> 
+      </div>
     )
   }
 }

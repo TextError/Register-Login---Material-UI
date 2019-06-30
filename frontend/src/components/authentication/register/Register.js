@@ -9,7 +9,7 @@ import Checkbox from '@material-ui/core/Checkbox';
 import Button from '@material-ui/core/Button';
 
 // Components
-import InputField from './InputField';
+import InputField from '../InputField';
 
 // CSS
 import '../../../css/register.css';
@@ -49,7 +49,7 @@ class Register extends Component {
               <div className='m-auto'>
                 <div className='register-form'>
                   <div className='register-paper'>
-                    <img src={logo} alt='logo' className='m-auto p-tb-10'/>
+                    <img src={logo} alt='logo' />
                     <Typography component="h1" variant="h4" className='register-sign-up'>
                       Sign up
                     </Typography>
@@ -143,8 +143,8 @@ class Register extends Component {
           </div>
         </div>
       </div>
-    )
-  }
-}
+    );
+  };
+};
 
 export default Register;
