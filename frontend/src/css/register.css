@@ -1,5 +1,28 @@
 
 
-.register-text-field {
-  margin: 0 20px;
+.register {
+  height: 100vh;
+}
+.register .container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.register-form {
+  max-width: 600px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+.register-paper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.register-avatar {
+  margin: 8px;
+  background-color: #f50057 !important;
+}
+.register-sign-up {
+  margin: 5px 0 25px 0 !important;
 }
