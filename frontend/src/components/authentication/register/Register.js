@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 // MUI
 import Grid from '@material-ui/core/Grid';
-import Avatar from '@material-ui/core/Avatar';
 import Typography from '@material-ui/core/Typography';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
@@ -13,6 +13,9 @@ import InputField from './InputField';
 
 // CSS
 import '../../../css/register.css';
+
+// Logo
+import logo from '../../../assets/logo.png';
 
 class Register extends Component {
   constructor() {
@@ -30,6 +33,12 @@ class Register extends Component {
     this.setState({ [e.target.name]: e.target.value })
   }
 
+  onSubmit = e => {
+    e.preventDefault();
+
+    console.log('test')
+  }
+
   render() {
     const { first_name, last_name, email, password, password2 } = this.state;
     return (
@@ -40,9 +49,7 @@ class Register extends Component {
               <div className='m-auto'>
                 <div className='register-form'>
                   <div className='register-paper'>
-                    <Avatar className='register-avatar'>
-
-                    </Avatar>
+                    <img src={logo} alt='logo' className='m-auto p-tb-10'/>
                     <Typography component="h1" variant="h4" className='register-sign-up'>
                       Sign up
                     </Typography>
@@ -108,8 +115,24 @@ class Register extends Component {
                         <Grid item xs={12}>
                           <FormControlLabel
                             control={<Checkbox value="allowExtraEmails" color="primary" />}
-                            label="I want to receive inspiration, marketing promotions and updates via email."
+                            label="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                            className='register-checkbox'
                           />
+                        </Grid>
+                      </Grid>
+                      <Button
+                        type="submit"
+                        fullWidth
+                        variant="contained"
+                        className='register-btn'
+                      >
+                        Sign Up
+                      </Button>
+                      <Grid container justify="flex-end">
+                        <Grid item className='register-link'>
+                          <Link to='/login'>
+                            Already have an account? Sign in
+                          </Link>
                         </Grid>
                       </Grid>
                     </form>

@@ -5,10 +5,6 @@
   --contrastText: #fff;
 }
 
-.m-auto {
-  margin: 0 auto;
-  display: flex;
-}
-.p-tb-10 {
-  padding: 10px 0;
+a {
+  text-decoration: none !important; /* no underline */
 }

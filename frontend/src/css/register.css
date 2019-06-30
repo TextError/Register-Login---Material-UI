@@ -1,4 +1,4 @@
-
+@import './app.css';
 
 .register {
   height: 100vh;
@@ -19,10 +19,16 @@
   align-items: center;
   flex-direction: column;
 }
-.register-avatar {
-  margin: 8px;
-  background-color: #f50057 !important;
-}
 .register-sign-up {
   margin: 5px 0 25px 0 !important;
+}
+.register-checkbox {
+  margin: 10px 0;
+}
+.register-btn {
+  background-color: var(--dark) !important;
+  margin: 10px 0 !important;
+}
+.register-link {
+  margin: 10px !important;
 }
