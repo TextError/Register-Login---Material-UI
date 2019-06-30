@@ -50,10 +50,10 @@ class SignIn extends Component {
           style={{ minHeight: '100vh' }}
         >
           <img src={logo} alt='logo' />
-          <Typography component="h1" variant="h4" className='login-sign-up'>
+          <Typography component="h1" variant="h4" className='login-sign-in'>
             Sign in
           </Typography>
-          <form className='login-form' noValidate onSubmit={this.onSubmit}>
+          <form className='sign-in-form' noValidate onSubmit={this.onSubmit}>
             <Grid container>
               <Grid item xs={12}>
                 <Box mb={2}>
@@ -95,7 +95,7 @@ class SignIn extends Component {
                 type="submit"
                 fullWidth
                 variant="contained"
-                className='login-btn'
+                className='sign-in-btn'
               >
                 Sign In
               </Button>
@@ -109,7 +109,7 @@ class SignIn extends Component {
                   </Grid>
                 <Grid item>
                   <Box mt={2}>
-                    <Link to='/register'>
+                    <Link to='/sign-up'>
                       {"Don't have an account? Sign Up"}
                     </Link>
                   </Box>

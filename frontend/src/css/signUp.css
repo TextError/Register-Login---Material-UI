@@ -1,16 +1,15 @@
 @import './app.css';
 
 
-.login-sign-in {
+.register-sign-up {
   margin: 5px 0 25px 0 !important;
 }
-.sign-in-form {
+.register-form {
   max-width: 444px;
   padding-left: 24px;
   padding-right: 24px;
-
 }
-.sign-in-btn {
+.register-btn {
   background-color: var(--dark) !important;
   color: #fff !important;
 }

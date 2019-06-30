@@ -7,7 +7,7 @@ import theme from './mui-theme/theme';
 
 // Components
 import Home from './components/home/Home';
-import Register from './components/authentication/register/Register';
+import SignUp from './components/authentication/signUp/SignUp';
 import SignIn from './components/authentication/signIn/SignIn';
 
 // Redux
@@ -30,7 +30,7 @@ function App() {
             <div className=''>
               <Switch>
                 <Route exact path='/' component={Home} />
-                <Route exact path='/register' component={Register} />
+                <Route exact path='/sign-up' component={SignUp} />
                 <Route exact path='/sign-in' component={SignIn} />
               </Switch>
             </div>
